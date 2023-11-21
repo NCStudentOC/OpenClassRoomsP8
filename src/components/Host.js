@@ -1,3 +1,4 @@
+import logements from '../logements/logements.json'
 
 export default function Host() {
     return (

@@ -10,7 +10,6 @@
   }
   @media screen and (max-width: 445px) {
     margin: 25px 20px 25px 20px;
-
     height: 111px;
   }
 }
@@ -37,7 +36,10 @@
 
   @media screen and (max-width: 445px) {
     font-size: 24px;
-    width: 70%;
+    width: 65%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
 
     text-align: left;
   }

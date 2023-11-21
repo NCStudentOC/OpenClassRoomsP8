@@ -2,13 +2,16 @@ import React from 'react'
 
 import Header from '../components/Header'
 import Slider from '../components/Slider'
-import Host from '../components/Host'
+// import Host from '../components/Host'
 // import Tags from '../components/Tags'
+import Stars from '../components/stars'
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer'
 
-import { useParams } from 'react-router-dom'
+import redStar from '../assets/red_star.png'
+import greyStar from '../assets/grey_star.png'
 
+import { useParams } from 'react-router-dom'
 import logements from '../logements/logements.json'
 
 export default function Description() {
@@ -33,7 +36,8 @@ export default function Description() {
             <h2 className="place">{logement.location}</h2>
           </div>
 
-          {/* <Tags tags={logement.tags} /> */}
+          {/*          
+            <Tags tags={logement.tags} /> */}
 
           <div className="Position_tags">
             {logement.tags.map((tag, index) => (
@@ -43,16 +47,32 @@ export default function Description() {
             ))}
           </div>
         </div>
+        {/* 
+        <Host host={logement.host} /> */}
+        <div className="host_star">
+          <div className="host">
+            <p className="host_name">{logement.host.name}</p>
+            <img
+              className="host_picture"
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
+          </div>
 
-        {/* <Host host={logement.host} /> */}
+          {/* <Stars /> */}
 
-        <div className="host">
-          <p className="host_name">{logement.host.name}</p>
-          <img
-            className="host_picture"
-            src={logement.host.picture}
-            alt={logement.host.name}
-          />
+          <div className="host_stars">
+            {[...Array(5)].map((star, index) => {
+              const starValue = index
+              return (
+                <img
+                  key={index}
+                  src={starValue <= logement.rating ? redStar : greyStar}
+                  alt="star"
+                />
+              )
+            })}
+          </div>
         </div>
       </section>
 
