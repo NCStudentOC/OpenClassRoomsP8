@@ -1,0 +1,24 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: $color-tertiary;
+  padding: 50px;
+  border-radius: 25px;
+  justify-content: center;
+  margin: 0 100px 50px 100px;
+
+  @media screen and (max-width: 1299px) {
+    margin: 0 100px 50px 100px;
+    gap: 35px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 50px 50px 50px;
+  }
+
+  @media screen and (max-width: 445px) {
+    margin: 25px 20px 25px 20px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,89 @@
+.collapse_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.collapse_contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 52px;
+  background-color: $color-secondary;
+  border-radius: 5px;
+  padding: 10px 20px 10px 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 445px) {
+    width: 100%;
+    height: 30px;
+  }
+
+  &_title {
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    @media screen and (max-width: 445px) {
+      font-size: 14px;
+    }
+  }
+
+  &_arrow {
+    transition: transform 0.5s ease;
+  }
+
+  .collapse_arrow.rotate {
+    transform: rotate(180deg);
+  }
+}
+.collapse_content {
+  width: 70%;
+  background-color: $color-tertiary;
+  color: $color-secondary;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 0 0 5px 5px;
+  padding: 15px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: row;
+    gap: 20px;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 445px) {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.Collapse {
+  display: flex;
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: row;
+    gap: 20px;
+    //   margin: 0 40px 45px 40px;
+  }
+  @media screen and (max-width: 445px) {
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 20px 45px 20px;
+    padding-bottom: 20px;
+  }
+}
+.Collapse_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
