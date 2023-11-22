@@ -63,7 +63,7 @@ export default function Description() {
 
           <div className="host_stars">
             {[...Array(5)].map((star, index) => {
-              const starValue = index
+              const starValue = index + 1
               return (
                 <img
                   key={index}

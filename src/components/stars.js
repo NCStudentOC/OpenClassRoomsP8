@@ -1,3 +1,4 @@
+import React from "react";
 import logements from '../logements/logements.json'
 import redStar from '../assets/red_star.png'
 import greyStar from '../assets/grey_star.png'
