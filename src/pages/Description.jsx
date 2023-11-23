@@ -30,21 +30,13 @@ export default function Description() {
             <h1>{logement.title}</h1>
             <h2 className="place">{logement.location}</h2>
           </div>
-
-             
-
-          
             <Tags />
-         
-
         </div>
         
-        <div className="host_star">
+        <div className="hostAndstar">
            <Host />
-
-              <div className="host_stars">
-                <Stars />
-          </div>
+            <Stars />
+     
         </div>
       </section>
 
