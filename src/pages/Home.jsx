@@ -4,13 +4,24 @@ import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
 import Image from '../assets/home_Image.png'
 import Loader from '../components/loader'
+import { useState,useEffect } from 'react'
+
 
 export default function Home() {
-  return (
+
+  const [loader,setLoader]=useState(true)
+
+useEffect(()=>{
+setTimeout(() => {
+  setLoader(false);
+},1500);
+},[]);
+
+  return loader ?( 
+ <Loader /> ) : (
+
     <div>
-   <Loader />
-    <div className="home">
-       
+    <div className="home">  
       <Header />
       <Banner
         BannerTitle="Chez vous, partout et ailleurs"
