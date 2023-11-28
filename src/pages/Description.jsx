@@ -10,14 +10,24 @@ import Footer from '../components/Footer'
 
 import redStar from '../assets/red_star.png'
 import greyStar from '../assets/grey_star.png'
-
-import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import logements from '../logements/logements.json'
 
 export default function Description() {
 
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
+
+ 
+    const idValid = !!logement;
+
+   
+    if (!idValid) {
+        return <Navigate to="*" /> 
+    }
+
+
   return (
    
     <main className="description">
@@ -30,12 +40,12 @@ export default function Description() {
             <h1>{logement.title}</h1>
             <h2 className="place">{logement.location}</h2>
           </div>
-            <Tags />
+            <Tags tags={logement.tags} />
         </div>
         
         <div className="hostAndstar">
-           <Host />
-            <Stars />
+           <Host host= {logement.host}/>
+            <Stars  star={logement.rating}/>
      
         </div>
       </section>

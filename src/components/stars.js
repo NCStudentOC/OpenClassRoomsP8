@@ -9,12 +9,12 @@ export default function Stars() {
         <div className="host_stars">
             {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1
-                const { id } = useParams()
-                const logement = logements.find((logement) => logement.id === id)
+                // const { id } = useParams()
+                // const logement = logements.find((logement) => logement.id === id)
                 return (
                     <img
                         key={index}
-                        src={ratingValue <= logement.rating ? redStar : greyStar}
+                        src={ratingValue <= star ? redStar : greyStar}
                         alt="star"
                     />
                 )
