@@ -1,14 +1,15 @@
 import React from "react";
-import logements from '../logements/logements.json'
-import { useParams } from 'react-router-dom'
 
-export default function Host(host) {
+
+const Host = ({ name, picture }) => {
 
 
     return (
         <div className="host">
-            <p className="host_name">{host.name}</p>
-            <img className="host_picture" src={host.picture} alt={host.name} />
+            <p className="host_name">{name}</p>
+            <img className="host_picture" src={picture} alt={name} />
         </div>
     )
 }
+
+export default Host;

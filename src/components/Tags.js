@@ -1,12 +1,10 @@
 import React from "react";
-import logements from '../logements/logements.json'
-import { useParams } from 'react-router-dom'
+// import logements from '../logements/logements.json'
+// import { useParams } from 'react-router-dom'
 
-export default function Tags(tags) {
-    tags = [];
-    // const { id } = useParams()
-    // const logement = logements.find((logement) => logement.id === id)
-    // Faire comme pour gallery en map les tags un par un
+const Tags = ({ tags }) => {
+
+
     return (
         <div className="Position_tags">
             {tags.map((tag, index) => (
@@ -15,3 +13,5 @@ export default function Tags(tags) {
         </div>
     )
 }
+
+export default Tags;

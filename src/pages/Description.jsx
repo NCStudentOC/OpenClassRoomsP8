@@ -8,19 +8,19 @@ import Stars from '../components/stars'
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer'
 
-import redStar from '../assets/red_star.png'
-import greyStar from '../assets/grey_star.png'
-import { Link } from 'react-router-dom'
+// import redStar from '../assets/red_star.png'
+// import greyStar from '../assets/grey_star.png'
+
 import { useParams, Navigate } from 'react-router-dom'
 import logements from '../logements/logements.json'
 
 export default function Description() {
 
   const { id } = useParams()
-  const logement = logements.find((logement) => logement.id === id)
+  const logementCurrent = logements.find((logement) => logement.id === id)
 
  
-    const idValid = !!logement;
+    const idValid = !!logementCurrent;
 
    
     if (!idValid) {
@@ -32,31 +32,32 @@ export default function Description() {
    
     <main className="description">
       <Header />
-      <Slider PicturesSlider={logement.pictures} />
+      <Slider PicturesSlider={logementCurrent.pictures} />
 
       <section className="information">
         <div className="title_place">
           <div className="title">
-            <h1>{logement.title}</h1>
-            <h2 className="place">{logement.location}</h2>
+            <h1>{logementCurrent.title}</h1>
+            <h2 className="place">{logementCurrent.location}</h2>
           </div>
-            <Tags tags={logement.tags} />
+            <Tags tags={logementCurrent.tags} />
         </div>
         
         <div className="hostAndstar">
-           <Host host= {logement.host}/>
-            <Stars  star={logement.rating}/>
+           <Host name= {logementCurrent.host.name} picture ={logementCurrent.host.picture}/>
+          
+            <Stars  rating={logementCurrent.rating}/>
      
         </div>
       </section>
 
       <section className="Collapse">
-        <Collapse title="Description" text={logement.description} />
+        <Collapse title="Description" text={logementCurrent.description} />
         <Collapse
           title="Equipement"
           text={
             <ul>
-              {logement.equipments.map((equipment, index) => (
+              {logementCurrent.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}
             </ul>
