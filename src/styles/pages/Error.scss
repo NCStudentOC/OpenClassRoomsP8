@@ -10,7 +10,7 @@
     gap: 150px;
     align-items: center;
     @media screen and (max-width: 445px) {
-      gap: 0px;
+      //  gap: 100px;
     }
 
     &_title {
@@ -23,6 +23,7 @@
 
       @media screen and (max-width: 445px) {
         font-size: 96px;
+       
       }
     }
     &_content {

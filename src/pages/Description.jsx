@@ -8,8 +8,7 @@ import Stars from '../components/stars'
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer'
 
-// import redStar from '../assets/red_star.png'
-// import greyStar from '../assets/grey_star.png'
+
 
 import { useParams, Navigate } from 'react-router-dom'
 import logements from '../logements/logements.json'
