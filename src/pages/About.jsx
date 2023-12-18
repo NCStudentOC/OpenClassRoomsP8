@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="home">
       <Header />
-      <Banner BannerTitle="" BannerImage={Image} />
+      <Banner  BannerImage={Image} />
       <main className="Collapse_main">
         {abouts.map((about, index) => {
           return (

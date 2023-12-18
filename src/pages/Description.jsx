@@ -19,10 +19,10 @@ export default function Description() {
   const logementCurrent = logements.find((logement) => logement.id === id)
 
  
-    const idValid = !!logementCurrent;
+    // const idValid = !!logementCurrent;
 
    
-    if (!idValid) {
+    if (!logementCurrent) {
         return <Navigate to="*" /> 
     }
 
@@ -43,9 +43,9 @@ export default function Description() {
         </div>
         
         <div className="hostAndstar">
-           <Host name= {logementCurrent.host.name} picture ={logementCurrent.host.picture}/>
+          <Host name= {logementCurrent.host.name} picture ={logementCurrent.host.picture}/>
           
-            <Stars  rating={logementCurrent.rating}/>
+          <Stars  rating={logementCurrent.rating}/>
      
         </div>
       </section>
