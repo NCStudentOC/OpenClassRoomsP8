@@ -19,7 +19,7 @@ export default function Description() {
   const logementCurrent = logements.find((logement) => logement.id === id)
 
  
-    // const idValid = !!logementCurrent;
+
 
    
     if (!logementCurrent) {
