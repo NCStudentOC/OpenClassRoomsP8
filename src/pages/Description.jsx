@@ -7,7 +7,7 @@ import Tags from '../components/Tags'
 import Stars from '../components/stars'
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer'
-
+import Error from './Error'
 
 
 import { useParams, Navigate } from 'react-router-dom'
@@ -23,7 +23,7 @@ export default function Description() {
 
    
     if (!logementCurrent) {
-        return <Navigate to="*" /> 
+        return <Error /> 
     }
 
 
